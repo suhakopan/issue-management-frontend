@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "issue-management"
+    }
+  },
+  "defaultProject": "issue-management",
+  "cli": {
+    "analytics": false
+  }
 }

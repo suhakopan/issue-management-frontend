@@ -1,0 +1,80 @@
+:host .header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+:host .header .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+:host .header .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+:host .header .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+:host .header .notification {
+    position: relative;
+}
+:host .header .notification:before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 20px;
+    border: 4px solid #fbb357;
+}
+:host .user-logedin .dropdown-toggle:after {
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+:host .app-switcher a {
+    text-decoration: none;
+}
+:host .app-switcher .card {
+    cursor: pointer;
+}
+:host .app-switcher .card:hover {
+    border-color: #adb5bd;
+}
+:host .app-switcher .card .app-selected {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #e9ecef;
+    border-radius: 100px;
+    padding: 4px;
+}
+:host .app-switcher .active-app {
+    border: 2px solid #adb5bd;
+}
+@media only screen and (max-width: 576px) {
+    :host .notificationDropdown {
+        right: -148px;
+   }
+}
+:host .top-navigation .navbar-nav .nav-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+:host .top-navigation .navbar-nav .nav-item .nav-link {
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 400;
+}
+:host .top-navigation .navbar-nav .nav-item .nav-link .nav-icon {
+    font-size: 20px;
+    vertical-align: bottom;
+}
+@media only screen and (min-width: 768px) {
+    :host .top-navigation .navbar-nav .nav-item .nav-link .nav-icon {
+        display: block;
+   }
+}
+@media only screen and (min-width: 768px) {
+    :host .top-navigation .navbar-nav .nav-item .nav-link {
+        text-align: center;
+   }
+}

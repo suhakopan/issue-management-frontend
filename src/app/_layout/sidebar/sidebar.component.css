@@ -1,0 +1,276 @@
+:host .sidebar {
+    position: fixed;
+    width: 220px;
+    background-color: #343a40;
+    height: 100%;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1022;
+    white-space: nowrap;
+    transition: all 0.5s;
+}
+:host .sidebar .navbar {
+    flex-wrap: unset;
+    white-space: nowrap;
+}
+:host .sidebar .navbar .brand-title {
+    opacity: 1;
+    transition: all 0.5s;
+}
+:host .sidebar .navbar .brand-title + span {
+    flex: auto;
+}
+:host .sidebar .navbar .toggle-sidebar {
+    margin-right: 0px;
+    transition: margin 0.5s;
+}
+:host .sidebar .navigation {
+    padding: 24px 0px;
+    overflow: auto;
+    height: calc(100vh - 62px);
+}
+:host .sidebar .navigation label {
+    font-size: 11px;
+    font-weight: 200;
+    padding: 1rem 1.2rem 0rem 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    overflow: hidden;
+}
+:host .sidebar .navigation ul {
+    margin: 0px;
+    padding: 0px;
+}
+:host .sidebar .navigation ul li {
+    list-style: none;
+    position: relative;
+    transition: all 0.5s;
+}
+:host .sidebar .navigation ul li a {
+    display: block;
+    padding: 0rem 1.2rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 48px;
+    font-weight: 300;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: relative;
+}
+:host .sidebar .navigation ul li a .nav-icon {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    transition: margin 0.5s;
+}
+:host .sidebar .navigation ul li a .toogle-sub-nav {
+    position: absolute;
+    right: 12px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    height: 18px;
+    font-size: 18px;
+    opacity: 1;
+    transition: all 0.5s;
+}
+:host .sidebar .navigation ul li a.active {
+    color: #fff;
+    box-shadow: inset 3px 0px 0px #4b89fc;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+:host .sidebar .navigation ul li:hover > a {
+    color: #fff;
+}
+:host .sidebar .navigation ul li.notification > a:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    left: 30px;
+    top: 10px;
+    background-color: #fbb357;
+    border-radius: 12px;
+    z-index: 1;
+}
+:host .sidebar .navigation ul li.open {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+:host .sidebar .navigation ul li.open > a {
+    color: #fff;
+}
+:host .sidebar .navigation ul li.open > a .toogle-sub-nav {
+    transform: rotate(90deg);
+}
+:host .sidebar .navigation ul li.open.active > a {
+    background-color: transparent;
+}
+:host .sidebar .navigation ul li.open > .sub-nav {
+    display: block;
+    top: 140px;
+    left: 64px;
+}
+:host .sidebar .navigation ul li .sub-nav {
+    display: none;
+    padding: 12px 0px;
+    padding-top: 0px;
+    top: 140px;
+    left: 64px;
+}
+:host .sidebar .navigation ul li .sub-nav li a {
+    line-height: 32px;
+    padding-left: calc(32px + 1.2rem);
+    font-size: 13px;
+}
+:host .sidebar .navigation ul li .sub-nav li.active a {
+    background-color: transparent;
+    box-shadow: none;
+}
+:host .sidebar.sidebar-light {
+    background-color: #fff;
+}
+:host .sidebar.sidebar-light .navigation label {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 400;
+}
+:host .sidebar.sidebar-light .navigation ul li a {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+}
+:host .sidebar.sidebar-light .navigation ul li a:hover {
+    color: rgba(0, 0, 0, 0.75);
+}
+:host .sidebar.sidebar-light .navigation ul li.active > a {
+    color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.075);
+}
+:host .sidebar.sidebar-light .navigation ul li.open {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+:host .sidebar.sidebar-light .navigation ul li.open > a {
+    color: rgba(0, 0, 0, 0.75);
+}
+:host .sidebar.sidebar-light .navigation ul li.open.active > a {
+    background-color: transparent;
+}
+:host .sidebar.sidebar-light.collapsed .navigation ul li .sub-nav {
+    background-color: #fff;
+    top: 140px;
+    left: 64px;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    :host .sidebar {
+        transition: none;
+   }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    :host .sidebar .navbar .brand-title {
+        transition: none;
+   }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    :host .sidebar .navbar .toggle-sidebar {
+        transition: none;
+   }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    :host .sidebar .navigation ul li {
+        transition: none;
+   }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    :host .sidebar .navigation ul li a {
+        transition: none;
+   }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    :host .sidebar .navigation ul li a .nav-icon {
+        transition: none;
+   }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    :host .sidebar .navigation ul li a .toogle-sub-nav {
+        transition: none;
+   }
+}
+@media only screen and (min-width: 768px) {
+    :host .sidebar.collapsed {
+        width: 70px;
+   }
+    :host .sidebar.collapsed .navbar {
+        place-content: flex-end;
+   }
+    :host .sidebar.collapsed .navbar .brand-title {
+        text-indent: -9em;
+        opacity: 0;
+        transition: all 0.5s;
+   }
+}
+@media only screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
+    .sidebar.collapsed .navbar .brand-title {
+        transition: none;
+   }
+}
+@media only screen and (min-width: 768px) {
+    :host .sidebar.collapsed .navbar .toggle-sidebar {
+        margin-right: 8px;
+   }
+    :host .sidebar.collapsed .navigation {
+        overflow-x: hidden;
+        overflow-y: auto;
+   }
+    :host .sidebar.collapsed .navigation label {
+        text-align: center;
+   }
+    :host .sidebar.collapsed .navigation label span {
+        display: none;
+   }
+    :host .sidebar.collapsed .navigation label:before {
+        content: '...';
+   }
+    :host .sidebar.collapsed .navigation ul li {
+        position: static;
+   }
+    :host .sidebar.collapsed .navigation ul li a {
+        padding: 0rem 1.4rem;
+   }
+    :host .sidebar.collapsed .navigation ul li a .nav-icon {
+        font-size: 22px;
+        margin-right: 22px;
+   }
+    :host .sidebar.collapsed .navigation ul li a .toogle-sub-nav {
+        opacity: 0;
+   }
+    :host .sidebar.collapsed .navigation ul li .sub-nav {
+        display: none !important;
+        position: absolute;
+        left: 100%;
+        top: 0px;
+        min-width: 200px;
+        padding: 12px 0px;
+        background-color: #343a40;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+   }
+    :host .sidebar.collapsed .navigation ul li .sub-nav a {
+        padding-left: 1.2rem;
+   }
+    :host .sidebar.collapsed .navigation ul li:hover .sub-nav {
+        display: block !important;
+        top: 140px;
+        left: 64px;
+   }
+}
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        left: -224px;
+   }
+    .sidebar.collapsed {
+        width: 220px;
+        left: 0px;
+   }
+}
